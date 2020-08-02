@@ -29,7 +29,7 @@ weatherForm.addEventListener('submit',(e)=>{
             }
             else{
                 console.log(data.forecast);
-                console.log(data.address);
+                // console.log(data.address);
                 location1.textContent=data.location;
                 local.textContent=data.localtime;
                 forecast.textContent=data.forecast;
