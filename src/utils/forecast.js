@@ -13,7 +13,8 @@ const forecast=(address,callback)=>{
                 // longitude: data.lon,
                 location: `${data.location.name}, ${data.location.region}, ${data.location.country}`,
                 localtime: data.location.localtime,
-                forecast: `${data.current.weather_descriptions[0]}. It is ${data.current.temperature} degrees out there.`,
+                isDay:data.current.is_day,
+                forecast: `${data.current.weather_descriptions[0]} at ${data.current.is_day=='yes'?"morning":"night"}. It is ${data.current.temperature} degrees out there.`,
             });
         }
     })

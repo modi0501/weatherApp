@@ -9,11 +9,117 @@
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: right;
+    text-decoration: none;
+    margin: 5px 5px;
+    border-radius: 50%;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    text-align: center;
+    color: white;
+  }
+  
+  .fa-pinterest {
+    background: #cb2027;
+    color: white;
+  }
+  .con {
+  position: relative;
+  width: 50%;
+}
+
+.portrait {
+  opacity: 1;
+  display: block;
+  width: 70%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.con:hover .portrait {
+  opacity: 0.3;
+}
+
+.con:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+    </style>
+
 </head>
 <body>
     <div class="main-content">
         {{>header}}
-        <img src="img/resimg.jpg" alt="Me" class="portrait">
+        <p>I am Mayank Modi.I have created this web app using Express and Node.js which uses weatherstack.com api to get weather data.You can reach out to me on following social media handles.</p>
+        <div class="con">
+            <img src="img/me.jpg" alt="Me" class="portrait"><br>
+            <div class="middle">
+                {{!-- <div class="text">John Doe</div> --}}
+                <a href="https://www.facebook.com/profile.php?id=100006093916513" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/arre_modi_ji" class="fa fa-twitter"></a>
+                {{!-- <a href="#" class="fa fa-google"></a> --}}
+                <a href="https://www.linkedin.com/in/mayankmodi0501/" class="fa fa-linkedin"></a>
+                <a href="https://www.instagram.com/arre_modi_ji/" class="fa fa-instagram"></a>
+            </div>
+        </div>
     </div>
     {{>footer}}
 </body>

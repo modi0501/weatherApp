@@ -59,6 +59,7 @@ app.get('/weather',(req,res)=>{
             location: data.location,
             localtime: data.localtime,
             address: req.query.address,
+            // is_day: data.isDay,
         })
     })
 })
